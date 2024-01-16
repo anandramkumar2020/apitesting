@@ -1,0 +1,30 @@
+{
+  "patient": {
+    "id": 123456789,
+    "firstName": "John",
+    "lastName": "Doe",
+    "gender": "Male",
+    "dateOfBirth": "1980-05-15",
+    "address": {
+      "street": "123 Main Street",
+      "city": "Sydney",
+      "state": "NSW",
+      "postalCode": "2000"
+    },
+    "contact": {
+      "email": "john.doe@example.com",
+      "phone": "+61 2 1234 5678"
+    },
+    "medicalHistory": {
+      "allergies": ["Penicillin"],
+      "conditions": ["Hypertension"],
+      "medications": ["Lisinopril"],
+      "surgeries": ["Appendectomy"]
+    },
+    "insurance": {
+      "provider": "HealthGuard",
+      "policyNumber": "HG123456789",
+      "expiryDate": "2025-12-31"
+    }
+  }
+}

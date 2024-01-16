@@ -8,8 +8,10 @@ public class TestRunner {
 //  Shell cmd --> .\mvnw clean test -Dtest="TestRunner#testScenario"	
 	@Karate.Test
 	Karate testScenario() {
-		return Karate.run("Get").relativeTo(getClass());
+		return Karate.run("001-Get").tags("@runonlythis").relativeTo(getClass());
 	}
+	
+	
 
 //	Run a specific feature having tag
 //  Shell cmd --> .\mvnw clean test -Dtest="TestRunner#testTags"

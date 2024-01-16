@@ -41,8 +41,9 @@
 ## 6. Test a Karate Scenario, provide cmd arguments
 
 - Navigate to the project folder `..\apitesting`
-- Run `.\mvnw clean test -D"karate.env=qa" -P gatling`
+- Run `.\mvnw clean test -D"karate.env=default" -P gatling`
 - Reports are generated; paste in the browser to view the results
+
 
 # Karate
 
