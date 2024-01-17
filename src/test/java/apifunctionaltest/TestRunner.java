@@ -8,7 +8,7 @@ public class TestRunner {
 //  Shell cmd --> .\mvnw clean test -Dtest="TestRunner#testScenario"	
 	@Karate.Test
 	Karate testScenario() {
-		return Karate.run("001-Get").tags("@runonlythis").relativeTo(getClass());
+		return Karate.run("002-Match").tags("@runonlythis").relativeTo(getClass());
 	}
 	
 	
