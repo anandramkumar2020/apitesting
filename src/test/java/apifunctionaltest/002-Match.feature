@@ -56,5 +56,5 @@ Feature: Exploring Match Functionality in API Validations
     * print responseIDs
     # match all ids
     * match responseIDs == [1,2,3,4,5,6]
-    # match to check if any of some ids are present
+    # match to check if any of ids are present
     * match responseIDs contains [2,5]

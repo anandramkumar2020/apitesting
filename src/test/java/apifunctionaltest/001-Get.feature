@@ -1,5 +1,5 @@
 #Author: anand.ramkumar@experionglobal.com
-
+@runonlythis
 Feature: Demonstrating GET Method
 
   # Background runs before each scenario
@@ -20,7 +20,6 @@ Feature: Demonstrating GET Method
     And print responseCookies
 
   # Objective: Demonstrate a GET request with a path using the background setup.
-  @runonlythis
   Scenario: Retrieve User Data with Path
     * path 'api/users?page=2'
     * method GET
