@@ -10,11 +10,11 @@ class TodoSimulation extends Simulation {
     
   )
 
-  val main = scenario("main").exec(karateFeature("classpath:apifunctionaltest/001-Get.feature")) 
+  val main = scenario("main").exec(karateFeature("classpath:apifunctionaltest/006-PerfTest.feature")) 
   
   
 
   setUp(
-    main.inject(rampUsers(1) during (5 seconds)).protocols(protocol)
+    main.inject(rampUsers(5) during (20 seconds)).protocols(protocol)
   )
 }

@@ -15,7 +15,7 @@ public class TestRunner {
      */
     @Karate.Test
     Karate testScenario() {
-        return Karate.run("004-CRUD").tags("@runonlythis").relativeTo(getClass());
+        return Karate.run("001-Get").tags("@runonlythis").relativeTo(getClass());
     }
 
     /**
@@ -26,7 +26,7 @@ public class TestRunner {
      */
     @Karate.Test
     Karate testTags() {
-        return Karate.run("ConfigDemo").tags("@runonlythis").relativeTo(getClass());
+        return Karate.run("001-Get").tags("@runonlythis").relativeTo(getClass());
     }
 
     /**
