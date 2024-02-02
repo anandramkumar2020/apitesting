@@ -19,6 +19,9 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
 
+      - name: Add Execution Permission
+        run: chmod +x mvnw
+
       - name: Build and Test with Maven
         run: |
           ./mvnw clean test -Dtest="TestRunner#testScenario"
