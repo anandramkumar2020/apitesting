@@ -1,5 +1,5 @@
 # Author: anand.ramkumar@experionglobal.com
-
+@runonlythis
 Feature: Demonstrating POST Method
 
   # Background runs before each scenario
@@ -8,7 +8,6 @@ Feature: Demonstrating POST Method
     * header Accept = headerAccept
 
   # Objective: Create a user named Morpheus with the role of a leader.
-  @runonlythis
   Scenario: Create User - Morpheus
     * path 'api/users'
     * request {"name": "morpheus", "job": "leader"}
@@ -32,17 +31,17 @@ Feature: Demonstrating POST Method
     * method GET
 
     Examples: 
-      | names       | job      |
-      | Neo         | The One  |
-      | Trinity     | Hacker   |
-      | Morpheus    | Captain  |
-      #| Agent Smith | Agent    |
-      #| Cypher      | Traitor  |
-      #| Oracle      | Seer     |
-      #| Dozer       | Operator |
-      #| Switch      | Operator |
-      #| Tank        | Operator |
+      | names    | job     |
+      | Neo      | The One |
+      | Trinity  | Hacker  |
+      | Morpheus | Captain |
 
+  #| Agent Smith | Agent    |
+  #| Cypher      | Traitor  |
+  #| Oracle      | Seer     |
+  #| Dozer       | Operator |
+  #| Switch      | Operator |
+  #| Tank        | Operator |
   # Objective: Create a user from a predefined JSON file and verify its creation.
   Scenario: Create User - From JSON
     * def jsonBody = read("user_data.json")
