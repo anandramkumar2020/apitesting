@@ -1,0 +1,21 @@
+name: Deploy Karate HTML Report
+
+on:
+  workflow_run:
+    workflows: ["Karate Test"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Deploy HTML Report
+        run: |
+          mkdir -p docs
+          cp -r apitesting/target/karate-reports/* docs/
+        shell: bash
