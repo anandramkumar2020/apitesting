@@ -25,3 +25,10 @@ jobs:
       - name: Build and Test with Maven
         run: |
           ./mvnw clean test -Dtest="TestRunner#testScenario"
+
+      - name: Deploy Karate HTML Report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/karate-reports
