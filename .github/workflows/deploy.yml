@@ -14,6 +14,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Check if Karate Reports exist
+        run: |
+          if [ -d "apitesting/target/karate-reports" ]; then
+            echo "Karate Reports found."
+          else
+            echo "Karate Reports not found. Exiting."
+            exit 1
+          fi
+
       - name: Deploy HTML Report
         run: |
           mkdir -p docs
